@@ -1,0 +1,61 @@
+{
+  "replace": true,
+  "groups": [
+    "coffee",
+    "eggs",
+    "fishs",
+    "fruits",
+    "grains",
+    "honeys",
+    "milks",
+    "mushrooms",
+    "nuts",
+    "proteins",
+    "salt",
+    "sugars",
+    "vegetables",
+    "wines"
+  ],
+  "effects": [
+    {
+      "attributes": [
+        {
+          "name": "minecraft:generic.max_health",
+          "operation": "add",
+          "amount": 2.0
+        }
+      ],
+      "conditions": [
+        {
+          "groups": [
+            "proteins",
+            "fruits",
+            "vegetables",
+            "grains"
+          ],
+          "match": "all",
+          "above": 0.8,
+          "below": 1.0
+        }
+      ]
+    },
+    {
+      "status_effects": [
+        {
+          "name": "minecraft:hunger",
+          "power": 3
+        }
+      ],
+      "conditions": [
+        {
+          "groups": [
+            "sugars"
+          ],
+          "match": "all",
+          "above": 0.8,
+          "below": 1.0
+        }
+      ]
+    }
+  ]
+}
